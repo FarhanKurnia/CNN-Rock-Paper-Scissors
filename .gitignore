@@ -1,0 +1,20 @@
+# Ignore the virtual environment folder
+venv/
+.venv
+static/images
+# If your virtual environment is located at a different path, specify it
+# For example, if your virtual environment is in a different folder
+# ./myenv/
+# venv/
+
+# Ignore Python compiled files
+*.pyc
+__pycache__/
+
+# Ignore Flask-specific files
+instance/
+*.db
+*.sqlite3
+
+# Ignore environment variables
+.env

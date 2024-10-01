@@ -1,0 +1,199 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Rock Paper Scissors Prediction</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            padding-top: 40px;
+        }
+        h1 {
+            color: #343a40;
+            font-weight: 600;
+            font-size: 2.5rem;
+            padding-bottom: 20px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .btn-success {
+            font-size: 1.1em;
+            padding: 10px 20px;
+            border-radius: 30px;
+        }
+        .file-upload-container {
+            padding: 20px 0;
+        }
+        .result-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .prediction-result {
+            background-color: #04aa6d;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+        .card-body {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h1>Rock Paper Scissors Prediction</h1>
+                        <div class="file-upload-container">
+                            <form class="form-inline d-flex justify-content-center" action="/" method="post" enctype="multipart/form-data">
+                                <input type="file" name="file" class="form-control-file" required>
+                                <input type="submit" class="btn btn-success ml-3" value="Predict">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                                <div>
+                                    <h4>Prediction:</h4>
+                                    <div class="prediction-result">
+                                        {{ result }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="{{ filepath }}" alt="User Image" class="result-img img-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <!-- Required meta tags -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+     <title>Rock Paper Scissors Prediction</title>
+     <style>
+         body {
+             font-family: 'Poppins', sans-serif;
+             background-color: #f4f4f9;
+             padding-top: 40px;
+         }
+         h1 {
+             color: #343a40;
+             font-weight: 600;
+             font-size: 2.5rem;
+             padding-bottom: 20px;
+         }
+         .card {
+             border: none;
+             border-radius: 10px;
+             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+         }
+         .btn-success {
+             font-size: 1.1em;
+             padding: 10px 20px;
+             border-radius: 30px;
+         }
+         .file-upload-container {
+             padding: 20px 0;
+         }
+         .result-img {
+             max-width: 100%;
+             height: auto;
+             border-radius: 10px;
+             margin-top: 20px;
+         }
+         .prediction-result {
+             background-color: #04aa6d;
+             color: white;
+             padding: 10px;
+             border-radius: 5px;
+             font-size: 1.2em;
+         }
+         .card-body {
+             padding: 30px;
+         }
+         .form-container {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             gap: 15px;
+         }
+     </style>
+ </head>
+ <body>
+     <div class="container">
+         <div class="row justify-content-center">
+             <div class="col-md-8">
+                 <div class="card text-center">
+                     <div class="card-body">
+                         <h1>Rock Paper Scissors Prediction</h1>
+                         <div class="file-upload-container">
+                             <form class="form-container" action="/" method="post" enctype="multipart/form-data">
+                                 <input type="file" name="file" class="form-control-file" required>
+                                 <input type="submit" class="btn btn-success" value="Predict">
+                             </form>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="card mt-4">
+                     <div class="card-body">
+                         <div class="row">
+                             <div class="col-md-6">
+                                 <img src="{{ filepath }}" alt="User Image" class="result-img img-thumbnail">
+                             </div>
+                             <div class="col-md-6 d-flex align-items-center justify-content-center">
+                                 <div>
+                                     <h4>Prediction:</h4>
+                                     <div class="prediction-result">
+                                         {{ result }}
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+ 
+             </div>
+         </div>
+     </div>
+ 
+     <!-- Bootstrap JS and dependencies -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ </body>
+ </html>
+ 
